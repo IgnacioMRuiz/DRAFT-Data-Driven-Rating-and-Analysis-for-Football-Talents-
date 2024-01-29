@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Adjust the path as per your file structure
-player_stats_all_seasons = '/Users/nacho/Desktop/DV7/Pyhton_Coded_Algorithem/data/Processed/player_stats_all_seasons.xlsx'
+player_stats_all_seasons = '/your/specific/path/data/Processed/player_stats_all_seasons.xlsx'
 
 # Read the Excel files
 player_stats_all_seasons = pd.read_excel(player_stats_all_seasons, engine='openpyxl')
@@ -77,5 +77,5 @@ columnas_a_normalizar = [
 df_normalized = normalizar_estadisticas_por_grupo(player_stats_all_seasons, columnas_a_normalizar)
 
 # Export the processed data to an Excel file
-processed_file_path = '/Users/nacho/Desktop/DV7/Pyhton_Coded_Algorithem/data/Normalized/player_stats_all_seasons_normalized.xlsx'
+processed_file_path = '/your/specific/path/data/Normalized/player_stats_all_seasons_normalized.xlsx'
 df_normalized.to_excel(processed_file_path, index=False, engine='openpyxl')
