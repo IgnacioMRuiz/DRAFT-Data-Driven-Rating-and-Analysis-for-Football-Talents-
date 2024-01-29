@@ -11,10 +11,10 @@ This project focuses on normalizing player statistics from various sports season
 player_stats_all_seasons.xlsx: Excel file containing raw player statistics data across different seasons.
 
 # Implementation Details
-# Data Loading
+## Data Loading
 The script starts by loading player statistics data from an Excel file using Pandas. Adjust the path to the Excel file as per your directory structure.
 
-# Normalization Function
+## Normalization Function
 normalizar_estadisticas_por_grupo is the core function used for normalizing the statistics. It takes a DataFrame and a list of column names to be normalized.
 
 - Parameters:
@@ -26,10 +26,10 @@ normalizar_estadisticas_por_grupo is the core function used for normalizing the 
   - It then iterates over the specified columns, grouping data by general position, season, and competition.
   - For each group, it normalizes the data to the 0-100 range based on z-scores.
 
-# Normalization Process
+## Normalization Process
 Columns to be normalized are listed and fed into the function along with the DataFrame. The resultant DataFrame includes both original and normalized data.
 
-# Data Export
+## Data Export
 The processed data is then exported to an Excel file for further analysis or usage.
 
 # Note on Function Names
