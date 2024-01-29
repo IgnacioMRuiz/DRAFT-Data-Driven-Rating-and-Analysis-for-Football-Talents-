@@ -7,6 +7,49 @@ player_stats_all_seasons = '/Users/nacho/Desktop/DV7/Pyhton_Coded_Algorithem/dat
 # Read the Excel files
 player_stats_all_seasons = pd.read_excel(player_stats_all_seasons, engine='openpyxl')
 
+def normalizar_estadisticas_por_grupo(df, columnas):
+    """
+    Normalize player statistics by applying season filters and
+    normalizing values to the 0-100 range.
+    """
+    # Calculate the minute threshold for the 2023 season
+    umbral_2023 = df[df['Temporada'] == 2023]['Minutos'].max() * 0.1
+
+    # Prepare a DataFrame for normalized columns
+    df_norm = pd.DataFrame(index=df.index)
+
+    # Iterate over columns to normalize
+    for columna in columnas:
+        df_norm[columna + '_norm'] = np.nan  # Initialize with NaN
+
+        # Group by 'Posición_General', 'Temporada', and 'Competición'
+        for (posicion, temporada, competicion), group_df in df.groupby(['Posición_General', 'Temporada', 'Competición']):
+            # Apply filter conditions from the first function
+            if temporada in [2018, 2019, 2020, 2021, 2022]:
+                indices = group_df[group_df['Minutos'] >= 400].index
+            elif temporada == 2023:
+                indices = group_df[group_df['Minutos'] >= umbral_2023].index
+            else:
+                continue  # No normalization applied for other seasons
+
+            # Calculate z-scores and scale to the range 0-100 for selected indices
+            if not indices.empty:
+                mean = df.loc[indices, columna].mean()
+                std = df.loc[indices, columna].std()
+                if std > 0:
+                    z_scores = (df.loc[indices, columna] - mean) / std
+                    min_z = z_scores.min()
+                    max_z = z_scores.max()
+                    scaled = (z_scores - min_z) / (max_z - min_z) * 100
+                    df_norm.loc[indices, columna + '_norm'] = scaled
+                else:
+                    df_norm.loc[indices, columna + '_norm'] = 50  # Neutral value if no variation
+
+    # Combine the original DataFrame with new normalized columns
+    df_final = pd.concat([df, df_norm], axis=1)
+
+    return df_final
+
 columnas_a_normalizar = [
     "Minutos", "Faltas x90","Tarjetas Amarillas", "Tarjetas Amarillas x90",
     "Tarjetas Rojas", "Tarjetas Rojas x90", "Faltas Sufridas x90", "Aceleraciones x90", "Carreras Progresivas x90",
