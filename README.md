@@ -92,6 +92,7 @@ Evaluar el rendimiento de los jugadores utilizando métricas ponderadas.
 
 ---
 
+
 # Discusión sobre el Algoritmo DRAFT
 
 ## Los Desafíos y el Futuro de DRAFT
