@@ -121,8 +121,6 @@ Preparar los datos para el análisis.
 - Tratamiento de valores faltantes o incorrectos.
 - Consolidación de datos de diferentes temporadas.
 
-
-
 ### 3. Normalización de datos (`03_data_normalization.ipynb`)
 #### Objetivo
 Normalizar las estadísticas de los jugadores.
@@ -162,6 +160,36 @@ Evaluar el rendimiento de los jugadores utilizando métricas ponderadas.
 - **Integración de Datos**: Asegurar un flujo de datos sin problemas entre las etapas.
 - **Actualización y Mantenimiento**: Establecer protocolos para actualizaciones y ajustes.
 - **Visualización y Reportes**: Desarrollar herramientas para visualizar y reportar los hallazgos.
+
+## Estructura
+Football_Analytics_Suite/
+│
+├── data/
+│   ├── raw/
+│   │   └── (aquí van los datos sin procesar)
+│   ├── cleaned/
+│   │   └── (aquí van los datos limpios)
+│   ├── normalized/
+│   │   └── (aquí van los datos normalizados)
+│   ├── final/
+│       └── (aquí van los datos finales)
+│
+├── directory/
+│   ├── R/
+│   │   ├── 01_data_extraction_2018_2022.R
+│   │   └── 01_data_extraction_2023.R
+│   ├── Python/
+│   │   ├── 02_data_cleaning.ipynb
+│   │   ├── 03_data_normalization.ipynb
+│   │   └── 04_performance_analysis.ipynb
+│   └── READMES/
+│       └── (README de cada script)
+│
+├── docs/
+│   └── (documentación del proyecto, notas, etc.)
+│
+└── README.md
+
 
 ---
 
