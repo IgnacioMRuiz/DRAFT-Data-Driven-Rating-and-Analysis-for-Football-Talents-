@@ -192,31 +192,25 @@ Football_Analytics_Suite/
 
 
 Football_Analytics_Suite/
-|
-|-- data/
-|   |-- raw/
-|   |   `-- (datos sin procesar)
-|   |-- cleaned/
-|   |   `-- (datos limpios)
-|   `-- normalized/
-|       `-- (datos normalizados)
-|
-|-- scripts/
-|   |-- R/
-|   |   |-- 01_data_extraction_2018_2022.R
-|   |   `-- 01_data_extraction_2023.R
-|   `-- Python/
-|       |-- 02_data_cleaning.ipynb
-|       |-- 03_data_normalization.ipynb
-|       `-- 04_performance_analysis.ipynb
-|
-|-- output/
-|   `-- (resultados del análisis)
-|
-|-- docs/
-|   `-- (documentación y notas)
-|
-`-- README.md
+├── data/
+│   ├── raw/              # Datos sin procesar
+│   ├── cleaned/          # Datos limpios
+│   └── normalized/       # Datos normalizados
+│
+├── scripts/
+│   ├── R/                # Scripts de R
+│   │   ├── 01_data_extraction_2018_2022.R
+│   │   └── 01_data_extraction_2023.R
+│   └── Python/           # Notebooks de Python
+│       ├── 02_data_cleaning.ipynb
+│       ├── 03_data_normalization.ipynb
+│       └── 04_performance_analysis.ipynb
+│
+├── output/               # Resultados del análisis
+│
+├── docs/                 # Documentación y notas
+│
+└── README.md             # Descripción del proyecto
 
 
 ---
