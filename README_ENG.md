@@ -2,6 +2,24 @@
 
 The Football Analytics Suite project is designed to collect, process, normalize, and analyze football players' data. Using the DRAFT algorithm, the project assesses the performance and value of players on the field.
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Detailed Explanation of the DRAFT Algorithm](#detailed-explanation-of-the-draft-algorithm)
+  - [Use of the Algorithm](#use-of-the-algorithm)
+  - [Interpretation of Results](#interpretation-of-results)
+  - [Practical Use](#practical-use)
+  - [Final Considerations](#final-considerations)
+- [Discussion on the DRAFT Algorithm](#discussion-on-the-draft-algorithm)
+  - [Challenges and Future](#challenges-and-future)
+- [Technical Process](#technical-process)
+  - [Data Extraction](#data-extraction)
+  - [Data Cleaning](#data-cleaning)
+  - [Data Normalization](#data-normalization)
+  - [Performance Analysis](#performance-analysis)
+- [Project Structure](#project-structure)
+- [Inspiration and References](#inspiration-and-references)
+
 ---
 
 ## Detailed Explanation of the DRAFT Algorithm
