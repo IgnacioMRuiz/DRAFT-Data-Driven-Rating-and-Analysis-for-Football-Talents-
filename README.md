@@ -92,6 +92,38 @@ Evaluar el rendimiento de los jugadores utilizando métricas ponderadas.
 
 ---
 
+# Discusión sobre el Algoritmo DRAFT
+
+## Los Desafíos y el Futuro de DRAFT
+
+Es importante ser transparente acerca de los posibles problemas y limitaciones del modelo DRAFT, así como de su salida. A continuación, se discuten algunos de estos desafíos, así como las posibles mejoras y desarrollos futuros.
+
+### Desafíos Actuales
+
+- **Automatización y Actualización de Datos**: Si bien el proceso es ahora automatizado, sigue requiriendo tiempo para recorrer y actualizar los datos en la plataforma Wyscout.
+- **Interpretación de las Puntuaciones**: Las puntuaciones, después de ser manipuladas y ponderadas, sirven principalmente para clasificar a los jugadores en sus roles.
+- **Comparabilidad de las Puntuaciones**: Las clasificaciones se realizan dentro de un conjunto de datos específico, lo que puede dificultar la comparación entre diferentes conjuntos de datos.
+- **Datos Defensivos**: La clasificación de atributos defensivos usando solo datos de eventos es compleja y puede no ser tan confiable como los datos de atributos ofensivos.
+- **Atributos Físicos**: Actualmente no es posible clasificar o evaluar atributos físicos.
+- **Diferenciación de Roles**: Algunos roles pueden ser difíciles de diferenciar si las diferencias clave no se pueden medir con los datos disponibles.
+- **Calidad de los Datos**: La eficacia del modelo DRAFT depende de la calidad de los datos de entrada.
+
+### Desarrollos Futuros
+
+- **Uso de Promedios de Atributos Posicionales**: Para comparar el rendimiento de los jugadores de manera más confiable y proporcionar un contrapunto a las puntuaciones relacionales.
+- **Mejora de la Presentación de Datos**: Trabajar en la interpretación y visualización de los datos para que sean comprensibles para el usuario final.
+- **Integración de Scouting Visual**: Desarrollar y combinar formularios de scouting visual con el sistema basado en datos para una visión holística del jugador.
+- **Ajuste Fácil de las Puntuaciones Finales**: Permitir que los usuarios finales apliquen diferentes ponderaciones, como aumentar la ponderación de la defensa 1v1 para los laterales.
+- **Inclusión de Métricas Avanzadas**: Como la amenaza esperada (xT) para agregar más contexto a algunos atributos clave.
+- **Uso de Datos de Posesión y Tilt de Campo**: Para reducir el sesgo del equipo en los datos de los jugadores.
+- **Uso de Calificaciones de Ligas y Clubes**: Para comparar de manera más efectiva a través de ligas.
+
+### Pensamientos Finales y Retroalimentación
+
+Si tienes comentarios o sugerencias sobre el modelo DRAFT, ya sean positivos o negativos, siempre son bienvenidos. Puedes contactarme a través de correo electrónico en nachomolinaruiz@gmail.com.
+
+---
+
 ### Insipiración
 Liam Henshaw - [Henshaw Analysis player ratings — methodology, discussion & examples](https://henshawanalysis.medium.com/henshaw-analysis-player-ratings-methodology-discussion-examples-555351393b9a)
 
