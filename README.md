@@ -91,7 +91,7 @@ Evaluar el rendimiento de los jugadores utilizando métricas ponderadas.
 - **Visualización y Reportes**: Desarrollar herramientas para visualizar y reportar los hallazgos.
 
 ---
-
+---
 
 # Discusión sobre el Algoritmo DRAFT
 
