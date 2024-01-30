@@ -1,18 +1,16 @@
-# Soccer Player Statistics Processing
-
-## Overview
+# Overview
 This script processes raw data of soccer player statistics from various seasons. It involves reading, cleaning, merging, and transforming data for further analysis and application.
 
-## Prerequisites
+# Prerequisites
 - Python 3
 - Pandas library
 - openpyxl library (for handling Excel files)
 
-## Data Files
+# Data Files
 - `player_stats_2018_2022_raw.xlsx`: Contains player statistics for the years 2018-2022.
 - `player_stats_2013_raw.xlsx`: Contains player statistics for the year 2013.
 
-## Key Steps in the Script
+# Key Steps in the Script
 1. **Data Loading**: The script starts by loading player statistics data from the 2018-2022 and 2013 seasons using Pandas. Paths to these files should be adjusted according to your file structure.
 
 2. **Data Merging**: Data from different seasons (2018-2022 and 2013) are merged into a single DataFrame.
@@ -37,8 +35,8 @@ This script processes raw data of soccer player statistics from various seasons.
 
 12. **Data Export**: The processed data is exported to an Excel file for further use.
 
-## Note on File Paths
+# Note on File Paths
 Please ensure that the paths to the Excel files are correctly set to match your directory structure.
 
-## Customization
+# Customization
 Feel free to modify the script to suit your specific data processing needs.
