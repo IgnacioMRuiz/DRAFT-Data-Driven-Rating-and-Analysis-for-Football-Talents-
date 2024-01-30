@@ -164,53 +164,56 @@ Evaluar el rendimiento de los jugadores utilizando métricas ponderadas.
 ## Estructura
 Football_Analytics_Suite/
 │
-├── data/
-│   ├── raw/
-│   │   └── (aquí van los datos sin procesar)
-│   ├── cleaned/
-│   │   └── (aquí van los datos limpios)
-│   ├── normalized/
-│   │   └── (aquí van los datos normalizados)
-│   ├── final/
-│       └── (aquí van los datos finales)
-│
-├── directory/
-│   ├── R/
-│   │   ├── 01_data_extraction_2018_2022.R
-│   │   └── 01_data_extraction_2023.R
-│   ├── Python/
-│   │   ├── 02_data_cleaning.ipynb
-│   │   ├── 03_data_normalization.ipynb
-│   │   └── 04_performance_analysis.ipynb
-│   └── READMES/
-│       └── (README de cada script)
-│
-├── docs/
-│   └── (documentación del proyecto, notas, etc.)
-│
-└── README.md
 
-Football_Analytics_Suite/
+├── data/
+
+│   ├── raw/
+
+│   │   └── (aquí van los datos sin procesar)
+
+│   ├── cleaned/
+
+│   │   └── (aquí van los datos limpios)
+
+│   ├── normalized/
+
+│   │   └── (aquí van los datos normalizados)
+
+│   ├── final/
+
+│       └── (aquí van los datos finales)
+
 │
-├─ data/
-│  ├─ raw/               - Datos sin procesar
-│  ├─ cleaned/           - Datos limpios
-│  └─ normalized/        - Datos normalizados
+
+├── directory/
+
+│   ├── R/
+
+│   │   ├── 01_data_extraction_2018_2022.R
+
+│   │   └── 01_data_extraction_2023.R
+
+│   ├── Python/
+
+│   │   ├── 02_data_cleaning.ipynb
+
+│   │   ├── 03_data_normalization.ipynb
+
+│   │   └── 04_performance_analysis.ipynb
+
+│   └── READMES/
+
+│       └── (README de cada script)
+
 │
-├─ scripts/
-│  ├─ R/                 - Scripts de R
-│  │  ├─ 01_data_extraction_2018_2022.R
-│  │  └─ 01_data_extraction_2023.R
-│  └─ Python/            - Notebooks de Python
-│     ├─ 02_data_cleaning.ipynb
-│     ├─ 03_data_normalization.ipynb
-│     └─ 04_performance_analysis.ipynb
+
+├── docs/
+
+│   └── (documentación del proyecto, notas, etc.)
+
 │
-├─ output/               - Resultados del análisis
-│
-├─ docs/                 - Documentación y notas
-│
-└─ README.md             - Descripción del proyecto
+
+└── README.md
 
 ---
 
