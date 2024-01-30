@@ -2,103 +2,59 @@
 
 El proyecto Football Analytics Suite está diseñado para recopilar, procesar, normalizar y analizar datos de jugadores de fútbol. Utilizando el algoritmo DRAFT, el proyecto evalúa el rendimiento y valor de los jugadores en el campo.
 
-## 1. Extracción de datos (`01_data_extraction_2018_2022.R / 01_data_extraction_2023.R`)
-### Objetivo
-Recopilar datos detallados de jugadores de fútbol.
+---
 
-### Funcionalidades Clave
-- Conexión con API para obtener estadísticas de jugadores.
-- Filtrado y selección de ligas y temporadas relevantes.
-- Almacenamiento de datos en formato Excel.
+## Explicación Detallada del Algoritmo DRAFT
 
-### Bibliotecas de R Utilizadas
-- `rjson`
-- `readxl`
-- `dplyr`
-- `stringr`
-- `writexl`
+El algoritmo DRAFT (Data-Driven Rating and Analysis for Football Talents) es un avanzado sistema de análisis de jugadores de fútbol. Su objetivo es evaluar integralmente el rendimiento de los jugadores a través de una combinación de estadísticas avanzadas y métodos de normalización.
 
-### Proceso
-- Obtención del token de acceso para la API.
-- Extracción de estadísticas de jugadores de diferentes ligas.
-- Limpieza inicial y formateo de los datos.
-- Exportación de los datos a un archivo Excel.
+### Uso del Algoritmo
+
+#### Evaluación Multidimensional
+DRAFT evalúa múltiples aspectos del juego, incluyendo habilidades ofensivas, defensivas, juego aéreo y contribuciones tácticas.
+
+#### Basado en Datos
+Las evaluaciones se fundamentan en datos recopilados, limpiados y normalizados de fuentes confiables, asegurando una evaluación objetiva y basada en el rendimiento real del jugador.
+
+### Interpretación de Resultados
+
+#### Escala de 0 a 100
+Cada jugador recibe una puntuación en una escala de 0 a 100, donde un puntaje más alto indica un rendimiento superior.
+
+#### Divisiones por Temporadas, Posiciones y Ligas
+Los jugadores son evaluados dentro de su contexto específico: por temporadas, posiciones y ligas. Esto permite ver la evolución del rendimiento, reconocer diferentes requisitos por posición y comparar dentro del mismo nivel competitivo.
+
+### Uso Práctico
+
+#### Scouting y Análisis de Talentos
+DRAFT es esencial para identificar talentos destacados o subestimados en diferentes ligas y posiciones.
+
+#### Evaluación Estratégica
+Permite a directores técnicos y estrategas evaluar fortalezas y debilidades tanto propias como de oponentes.
+
+#### Desarrollo de Jugadores
+Facilita a los entrenadores identificar áreas específicas de mejora para sus jugadores.
+
+#### Comparaciones y Benchmarks
+Facilita la realización de benchmarks entre jugadores de diferentes ligas o temporadas.
+
+### Consideraciones Finales
+
+DRAFT es una herramienta dinámica y adaptable, capaz de ajustarse y evolucionar con nuevas informaciones y métricas.
+
+### Conclusión
+
+DRAFT ofrece una visión detallada y multifacética del rendimiento de los jugadores, siendo una herramienta indispensable para profesionales del fútbol en todo el mundo.
 
 ---
 
-## 2. Limpieza de datos (`02_data_cleaning.ipynb`)
-### Objetivo
-Preparar los datos para el análisis.
+## Discusión sobre el Algoritmo DRAFT
 
-### Funcionalidades Clave
-- Lectura de los datos desde archivos Excel.
-- Selección y renombrado de columnas específicas.
-- Limpieza de valores nulos y transformaciones necesarias.
-
-### Bibliotecas de Python Utilizadas
-- `pandas`
-
-### Proceso
-- Carga de datos de Excel usando `pandas`.
-- Renombrado de columnas para mejorar la claridad.
-- Tratamiento de valores faltantes o incorrectos.
-- Consolidación de datos de diferentes temporadas.
-
----
-
-## 3. Normalización de datos (`03_data_normalization.ipynb`)
-### Objetivo
-Normalizar las estadísticas de los jugadores.
-
-### Funcionalidades Clave
-- Aplicación de técnicas de normalización a las métricas de los jugadores.
-- Asegurar comparabilidad entre jugadores de diferentes ligas y temporadas.
-
-### Bibliotecas de Python Utilizadas
-- `pandas`
-- `numpy`
-
-### Proceso
-- Cálculo de umbrales y criterios para la normalización.
-- Normalización de estadísticas individuales a una escala común.
-- Combinación de los datos normalizados con el conjunto de datos original.
-
----
-
-## 4. Performance Analysis (`04_performance_algorithem.ipynb`)
-### Objetivo
-Evaluar el rendimiento de los jugadores utilizando métricas ponderadas.
-
-### Funcionalidades Clave
-- Aplicación de un conjunto de pesos a las estadísticas normalizadas.
-- Cálculo de una puntuación de rendimiento global para cada jugador.
-
-### Bibliotecas de Python Utilizadas
-- `pandas`
-- `numpy`
-
-### Proceso
-- Definición de pesos para diferentes posiciones y métricas.
-- Cálculo del rendimiento basado en los pesos asignados.
-- Reescalamiento de las puntuaciones para comparación uniforme.
-- Exportación de los datos finales para su uso en análisis o visualizaciones.
-
----
-
-## Consideraciones Adicionales
-- **Integración de Datos**: Asegurar un flujo de datos sin problemas entre las etapas.
-- **Actualización y Mantenimiento**: Establecer protocolos para actualizaciones y ajustes.
-- **Visualización y Reportes**: Desarrollar herramientas para visualizar y reportar los hallazgos.
-
----
-
-# Discusión sobre el Algoritmo DRAFT
-
-## Los Desafíos y el Futuro de DRAFT
+### Los Desafíos y el Futuro de DRAFT
 
 Es importante ser transparente acerca de los posibles problemas y limitaciones del modelo DRAFT, así como de su salida. A continuación, se discuten algunos de estos desafíos, así como las posibles mejoras y desarrollos futuros.
 
-### Desafíos Actuales
+#### Desafíos Actuales
 
 - **Automatización y Actualización de Datos**: Si bien el proceso es ahora automatizado, sigue requiriendo tiempo para recorrer y actualizar los datos en la plataforma Wyscout.
 - **Interpretación de las Puntuaciones**: Las puntuaciones, después de ser manipuladas y ponderadas, sirven principalmente para clasificar a los jugadores en sus roles.
@@ -108,7 +64,7 @@ Es importante ser transparente acerca de los posibles problemas y limitaciones d
 - **Diferenciación de Roles**: Algunos roles pueden ser difíciles de diferenciar si las diferencias clave no se pueden medir con los datos disponibles.
 - **Calidad de los Datos**: La eficacia del modelo DRAFT depende de la calidad de los datos de entrada.
 
-### Desarrollos Futuros
+#### Desarrollos Futuros
 
 - **Uso de Promedios de Atributos Posicionales**: Para comparar el rendimiento de los jugadores de manera más confiable y proporcionar un contrapunto a las puntuaciones relacionales.
 - **Mejora de la Presentación de Datos**: Trabajar en la interpretación y visualización de los datos para que sean comprensibles para el usuario final.
@@ -118,13 +74,98 @@ Es importante ser transparente acerca de los posibles problemas y limitaciones d
 - **Uso de Datos de Posesión y Tilt de Campo**: Para reducir el sesgo del equipo en los datos de los jugadores.
 - **Uso de Calificaciones de Ligas y Clubes**: Para comparar de manera más efectiva a través de ligas.
 
-### Pensamientos Finales y Retroalimentación
+#### Pensamientos Finales y Retroalimentación
 
 Si tienes comentarios o sugerencias sobre el modelo DRAFT, ya sean positivos o negativos, siempre son bienvenidos. Puedes contactarme a través de correo electrónico en nachomolinaruiz@gmail.com.
 
 ---
 
-### Insipiración
+## Proceso Técnico
+### 1. Extracción de datos (`01_data_extraction_2018_2022.R / 01_data_extraction_2023.R`)
+#### Objetivo
+Recopilar datos detallados de jugadores de fútbol.
+
+#### Funcionalidades Clave
+- Conexión con API para obtener estadísticas de jugadores.
+- Filtrado y selección de ligas y temporadas relevantes.
+- Almacenamiento de datos en formato Excel.
+
+#### Bibliotecas de R Utilizadas
+- `rjson`
+- `readxl`
+- `dplyr`
+- `stringr`
+- `writexl`
+
+#### Proceso
+- Obtención del token de acceso para la API.
+- Extracción de estadísticas de jugadores de diferentes ligas.
+- Limpieza inicial y formateo de los datos.
+- Exportación de los datos a un archivo Excel.
+
+### 2. Limpieza de datos (`02_data_cleaning.ipynb`)
+### Objetivo
+Preparar los datos para el análisis.
+
+#### Funcionalidades Clave
+- Lectura de los datos desde archivos Excel.
+- Selección y renombrado de columnas específicas.
+- Limpieza de valores nulos y transformaciones necesarias.
+
+#### Bibliotecas de Python Utilizadas
+- `pandas`
+
+#### Proceso
+- Carga de datos de Excel usando `pandas`.
+- Renombrado de columnas para mejorar la claridad.
+- Tratamiento de valores faltantes o incorrectos.
+- Consolidación de datos de diferentes temporadas.
+
+
+
+### 3. Normalización de datos (`03_data_normalization.ipynb`)
+#### Objetivo
+Normalizar las estadísticas de los jugadores.
+
+#### Funcionalidades Clave
+- Aplicación de técnicas de normalización a las métricas de los jugadores.
+- Asegurar comparabilidad entre jugadores de diferentes ligas y temporadas.
+
+#### Bibliotecas de Python Utilizadas
+- `pandas`
+- `numpy`
+
+#### Proceso
+- Cálculo de umbrales y criterios para la normalización.
+- Normalización de estadísticas individuales a una escala común.
+- Combinación de los datos normalizados con el conjunto de datos original.
+
+### 4. Performance Analysis (`04_performance_algorithem.ipynb`)
+#### Objetivo
+Evaluar el rendimiento de los jugadores utilizando métricas ponderadas.
+
+#### Funcionalidades Clave
+- Aplicación de un conjunto de pesos a las estadísticas normalizadas.
+- Cálculo de una puntuación de rendimiento global para cada jugador.
+
+#### Bibliotecas de Python Utilizadas
+- `pandas`
+- `numpy`
+
+#### Proceso
+- Definición de pesos para diferentes posiciones y métricas.
+- Cálculo del rendimiento basado en los pesos asignados.
+- Reescalamiento de las puntuaciones para comparación uniforme.
+- Exportación de los datos finales para su uso en análisis o visualizaciones.
+
+### Consideraciones Adicionales
+- **Integración de Datos**: Asegurar un flujo de datos sin problemas entre las etapas.
+- **Actualización y Mantenimiento**: Establecer protocolos para actualizaciones y ajustes.
+- **Visualización y Reportes**: Desarrollar herramientas para visualizar y reportar los hallazgos.
+
+---
+
+## Insipiración
 Liam Henshaw - [Henshaw Analysis player ratings — methodology, discussion & examples](https://henshawanalysis.medium.com/henshaw-analysis-player-ratings-methodology-discussion-examples-555351393b9a)
 
 Andy Watson - [AW Role Scouting System: The Launch](https://andywatsonsport.wordpress.com/2022/02/02/aw-role-scouting-system-the-launch/)
@@ -132,5 +173,3 @@ Andy Watson - [AW Role Scouting System: The Launch](https://andywatsonsport.word
 Rubén Sánchez-López, Ibon Echeazarra y Julen Castellano Paulis - [Validation of an instrument to qualify football competence via WyScout](https://revista-apunts.com/en/validation-of-an-instrument-to-qualify-football-competence-via-wyscout/)
 
 Anterior trabajo propio - [Proceso de scouting y confección de plantilla R.C.D Espanyol para la temporada 23/24](https://www.linkedin.com/posts/ignaciomruiz_scouting-y-confecci%C3%B3n-de-plantilla-rcd-activity-7091011895117111296-AR6g?utm_source=share&utm_medium=member_desktop)
-
-Este proyecto ofrece insights valiosos y detallados sobre el rendimiento de los jugadores en el fútbol, apoyando en la toma de decisiones en scouting, gestión de equipos y análisis deportivo.
