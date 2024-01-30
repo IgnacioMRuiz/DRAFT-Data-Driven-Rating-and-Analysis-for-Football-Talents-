@@ -94,8 +94,11 @@ Evaluar el rendimiento de los jugadores utilizando métricas ponderadas.
 
 ### Insipiración
 Liam Henshaw - [Henshaw Analysis player ratings — methodology, discussion & examples](https://henshawanalysis.medium.com/henshaw-analysis-player-ratings-methodology-discussion-examples-555351393b9a)
+
 Andy Watson - [AW Role Scouting System: The Launch](https://andywatsonsport.wordpress.com/2022/02/02/aw-role-scouting-system-the-launch/)
+
 Rubén Sánchez-López, Ibon Echeazarra y Julen Castellano Paulis - [Validation of an instrument to qualify football competence via WyScout](https://revista-apunts.com/en/validation-of-an-instrument-to-qualify-football-competence-via-wyscout/)
+
 Anterior trabajo propio - [Proceso de scouting y confección de plantilla R.C.D Espanyol para la temporada 23/24](https://www.linkedin.com/posts/ignaciomruiz_scouting-y-confecci%C3%B3n-de-plantilla-rcd-activity-7091011895117111296-AR6g?utm_source=share&utm_medium=member_desktop)
 
 Este proyecto ofrece insights valiosos y detallados sobre el rendimiento de los jugadores en el fútbol, apoyando en la toma de decisiones en scouting, gestión de equipos y análisis deportivo.
