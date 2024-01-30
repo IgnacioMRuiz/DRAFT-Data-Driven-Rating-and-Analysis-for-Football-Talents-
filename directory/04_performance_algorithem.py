@@ -3,34 +3,33 @@ import numpy as np
 
 # Adjust the path as per your file structure
 player_stats_all_seasons = '/Users/nacho/Desktop/DV7/Pyhton_Coded_Algorithem/data/Normalized/player_stats_all_seasons_normalized.xlsx'
-
 # Read the Excel files
 player_stats_all_seasons_normalized = pd.read_excel(player_stats_all_seasons, engine='openpyxl')
 
 def aplicar_pesos(df, pesos_por_posicion):
     """
-    Aplica los pesos específicos a las métricas normalizadas para calcular
-    las calificaciones finales de los jugadores basándose en su `Posición_General`.
+    Applies the specific weights to the normalised metrics to calculate the players' final ratings based on their `Overall_Position
+    players' final ratings based on their `Overall_Position`.
 
-    Asume que todas las métricas en `df` ya están normalizadas.
+    Assumes all metrics in `df` are already normalised.
 
-    :param df: DataFrame con las estadísticas de los jugadores ya normalizadas.
-    :param pesos_por_posicion: Diccionario que contiene los pesos para cada métrica según la `Posición_General`.
-    :return: DataFrame con las calificaciones finales añadidas.
+    Param df: DataFrame with player statistics already normalised.
+    :param weights_by_position: Dictionary containing the weights for each metric according to the `General_Position`.
+    return: DataFrame with the final ratings added.
     """
-    # Inicializar columna de rendimiento en el DataFrame
+    # Initialise performance column in the DataFrame
     df['Rendimiento'] = 0.0
     
     for posicion, pesos in pesos_por_posicion.items():
-        # Crear una máscara para filtrar jugadores de la posición actual
+        # Create a mask to filter players from the current position
         mask = df['Posición_General'] == posicion
         
         for metrica, peso in pesos.items():
-            # Construir el nombre de la columna de la métrica
+            # Construct the metric column name
             columna_metrica = metrica  # Ya no añadimos '_norm' porque asumimos que todas están normalizadas
             
             if columna_metrica in df.columns:
-                # Aplicar peso y acumular en 'Rendimiento'
+                # Apply weight and accumulate in 'Performance'.
                 df.loc[mask, 'Rendimiento'] += df.loc[mask, columna_metrica] * peso
 
     return df
@@ -182,27 +181,24 @@ pesos_por_posicion = {
         'Diferencia xG/ Goles_norm': 0.15,
     }
 }
-
-# Suponiendo que 'player_stats_all_seasons' es tu DataFrame
 player_stats_all_seasons_final = aplicar_pesos(player_stats_all_seasons_normalized, pesos_por_posicion)
 
-#Función reescalar resultados
+# Function for rescaling results
 def reescalar_a_100(grupo):
     minimo = grupo.min()
     maximo = grupo.max()
-    # Evitar división por cero en caso de que todos los valores en el grupo sean iguales.
+    # Avoid division by zero in case all values in the group are equal.
     if maximo == minimo:
         return grupo
     else:
-        return (grupo - minimo) / (maximo - minimo) * 100
-    
-player_stats_all_seasons_final['Rendimiento_Reescalado'] = player_stats_all_seasons_final.groupby(['Posición_General', 'Temporada', 'Competición'])['Rendimiento'].transform(reescalar_a_100)
+        return (grupo - minimo) / (maximo - minimo) * 100    
+# Rescale to 100 and then round off
+player_stats_all_seasons_final['Rendimiento_Reescalado'] = player_stats_all_seasons_final.groupby(['Posición_General', 'Temporada', 'Competición'])['Rendimiento'].transform(reescalar_a_100).round()
 
-#Eliminar las colunas producto de la normalización
-# Seleccionar columnas que no terminan en "_norm"
+#Eliminate the colunae resulting from standardisation
+# Select columns that do not end in "_norm" 
 columnas_a_mantener = [col for col in player_stats_all_seasons_final.columns if not col.endswith('_norm')]
-
-# Reasignar el DataFrame solo a esas columnas
+# Reassign the DataFrame only to those columns
 player_stats_all_seasons_final = player_stats_all_seasons_final[columnas_a_mantener]
 
 # Export the processed data to an Excel file
