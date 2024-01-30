@@ -162,58 +162,31 @@ Evaluar el rendimiento de los jugadores utilizando métricas ponderadas.
 - **Visualización y Reportes**: Desarrollar herramientas para visualizar y reportar los hallazgos.
 
 ## Estructura
-Football_Analytics_Suite/
-│
+Este proyecto incluye varias carpetas y archivos organizados para facilitar el desarrollo y el análisis:
 
-├── data/
+## Directorio de Datos
+- `data/`: Carpeta principal para todos los conjuntos de datos.
+  - `raw/`: Almacena los datos sin procesar obtenidos de las fuentes.
+  - `cleaned/`: Contiene los datos que han sido limpiados y preprocesados.
+  - `normalized/`: Datos después de aplicar procesos de normalización.
+  - `final/`: Datos finales procesados y listos para el análisis.
 
-│   ├── raw/
+## Directorio de Scripts y Notebooks
+- `directory/`: Incluye scripts y notebooks del proyecto.
+  - `R/`: Scripts de R para la extracción de datos.
+    - `01_data_extraction_2018_2022.R`: Extracción de datos de las temporadas 2018 a 2022.
+    - `01_data_extraction_2023.R`: Extracción de datos de la temporada 2023.
+  - `Python/`: Notebooks de Python para limpieza, normalización y análisis.
+    - `02_data_cleaning.ipynb`: Notebook para limpieza de datos.
+    - `03_data_normalization.ipynb`: Notebook para normalización de datos.
+    - `04_performance_analysis.ipynb`: Notebook para análisis de rendimiento.
+  - `READMES/`: READMEs para cada script o notebook.
 
-│   │   └── (aquí van los datos sin procesar)
+## Documentación
+- `docs/`: Documentación del proyecto, notas adicionales y materiales de referencia.
 
-│   ├── cleaned/
-
-│   │   └── (aquí van los datos limpios)
-
-│   ├── normalized/
-
-│   │   └── (aquí van los datos normalizados)
-
-│   ├── final/
-
-│       └── (aquí van los datos finales)
-
-│
-
-├── directory/
-
-│   ├── R/
-
-│   │   ├── 01_data_extraction_2018_2022.R
-
-│   │   └── 01_data_extraction_2023.R
-
-│   ├── Python/
-
-│   │   ├── 02_data_cleaning.ipynb
-
-│   │   ├── 03_data_normalization.ipynb
-
-│   │   └── 04_performance_analysis.ipynb
-
-│   └── READMES/
-
-│       └── (README de cada script)
-
-│
-
-├── docs/
-
-│   └── (documentación del proyecto, notas, etc.)
-
-│
-
-└── README.md
+## README Principal
+- `README.md`: Descripción general y detallada del proyecto.
 
 ---
 
